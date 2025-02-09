@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jlr"
+version = "0.0.1"
+description = "JobListRunner Python package is a simple tool to conditionally submit a list of jobs in a folder."
+authors = [
+    { name = "Simon Bertrand", email = "simonbertrand.contact@gmail.com" },
+]
+maintainers = [
+    { name = "Simon Bertrand", email = "simonbertrand.contact@gmail.com" },
+]
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = [
+    "jobs",
+    "scheduler",
+    "list",
+    "folder",
+    "scripts",
+    "auto-submit",
+]
+classifiers = ["Programming Language :: Python :: 3"]
+dependencies = [
+"pyyaml",
+"pydantic"
+
+]
+[project.scripts]
+jlr = "jlr.__main__:main"
+
+[project.optional-dependencies]
+tests = ["flake8==7.0.0", "isort==5.13.2", "black==24.1.1"]
+
+[project.urls]
+Repository = "https://github.com/Simon-Bertrand/JobListRunner"
+
+[tool.setuptools.packages.find]
+include = ["jlr"]
+
